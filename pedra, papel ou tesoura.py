@@ -12,15 +12,15 @@ def jogo():
         print("\nO computador escolheu",computador)
         if usuario == computador:
             print("Empate!")
-            qtd_derrotas +=1
+            qtd_empates +=1
         elif vencedor(usuario, computador):
             print("Você ganhou!")
             qtd_vitorias +=1
         else:
             print("Você perdeu!")
-            qtd_empates +=1
+            qtd_derrotas +=1
         escolha = input("\nDeseja jogar? s ou n: ")
-    return "\nPartidas jogadas: "+ str(cont) + "\n● Você ganhou " + str(qtd_vitorias) +" vez(es)! \n● Perdeu " + str(qtd_derrotas) + "\n● Empatou " + str(qtd_empates)
+    return "\nPartidas jogadas: "+ str(cont) + "\n● Você ganhou " + str(qtd_vitorias) + "\n● Perdeu " + str(qtd_derrotas) + "\n● Empatou " + str(qtd_empates)
     
 # r > t; t > p; p > r
 def vencedor(jogador, oponente):
